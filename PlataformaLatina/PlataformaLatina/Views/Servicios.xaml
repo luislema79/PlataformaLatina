@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PlataformaLatina.Views.Servicios"
+             xmlns:vm="clr-namespace:PlataformaLatina.ViewModels"
+             Title="{Binding Title}" NavigationPage.HasNavigationBar="True">
+    <ContentPage.BindingContext>
+        <vm:ServiciosViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <ListView>
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>&#x2022;  Diseño de páginas web.</x:String>
+                    <x:String>&#x2022;  Publicidad en línea e impresa (flyers).</x:String>   
+                    <x:String>&#x2022;  Videos promocionales.</x:String>
+                    <x:String>&#x2022;  Video y fotografía (bodas, quinceañeros, etc.).</x:String>
+                </x:Array>
+            </ListView.ItemsSource>           
+            <ListView.Header>
+                <StackLayout Padding="10,5,0,5">
+                    <Label Text="Ofrecemos los siguientes servicios:" TextColor="#000000" FontSize="15"/>
+                </StackLayout>
+            </ListView.Header>
+        </ListView>
+    </StackLayout>  
+</ContentPage>
